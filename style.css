@@ -1,0 +1,134 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+h1, h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.25rem;
+  color: #ccc;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+.hero {
+  height: 100vh;
+  background: url('header-bg.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+section {
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.gallery img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.15);
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+.parallax {
+  background: url('header-bg.jpg') center/cover fixed no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+.download {
+  background: #111;
+  padding: 5rem 2rem;
+}
+.download img {
+  height: 60px;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+.download img:hover {
+  transform: scale(1.1);
+}
+footer {
+  background: #000;
+  color: #666;
+  text-align: center;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .gallery img {
+    width: 80%;
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+}
+
+
+.problem p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  z-index: 0;
+}
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
+}
+
+
